@@ -313,6 +313,7 @@ button {
 
 .contacts__icon--phone, .contacts__icon--mail {
   fill: currentColor;
+  font-weight: 500;
 }
 
 .desktop-only {
@@ -331,6 +332,11 @@ button {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+  }
+  .container--flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -548,6 +554,11 @@ button {
   padding: 13px 28px;
   transition: background-color var(--transition), color var(--transition);
 }
+@media screen and (max-width: 1199px) {
+  .button--subscribe {
+    padding: 10px 28px 10px 31px;
+  }
+}
 .button--subscribe:hover, .button--subscribe:focus {
   background-color: var(--footer-text-color);
   color: var(--accent-text-color);
@@ -570,6 +581,7 @@ button {
 
 .socials-collection {
   display: flex;
+  gap: 10px;
   justify-content: center;
 }
 .socials-collection__icon {
@@ -592,16 +604,47 @@ button {
   background-color: var(--accent-text-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    align-self: start;
+  }
+}
+
 .subscribe__input {
+  height: 50px;
+  width: 100%;
+  max-width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  padding: 15px 16px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: var(--footer-text-color);
   transition: border-color var(--transition);
+}
+@media screen and (max-width: 1199px) {
+  .subscribe__input {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 .subscribe__input::placeholder {
   font-size: 16px;
@@ -625,7 +668,9 @@ button {
 }
 @media screen and (min-width: 768px) {
   .mobile-dropdown {
-    display: block;
+    display: flex;
+    margin-left: 78px;
+    align-items: center;
   }
 }
 
@@ -637,7 +682,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding: 25px 0;
+    padding: 10px 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -649,7 +694,10 @@ button {
 .pages {
   display: flex;
   align-items: center;
+  gap: 50px;
+  margin-right: 90px;
 }
+
 .header__link {
   position: relative;
   line-height: 1.1;
@@ -664,9 +712,22 @@ button {
 }
 .header__link--contacts {
   color: var(--main-text-color);
+  letter-spacing: 0.02em;
 }
 .header__link--contacts:hover, .header__link--contacts:focus {
   color: var(--accent-text-color);
+}
+@media screen and (min-width: 768px) {
+  .header__link--contacts {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__link--contacts {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .current {
@@ -684,16 +745,43 @@ button {
 }
 
 .contacts {
-  margin-left: auto;
+  align-self: flex-end;
 }
-.contacts__icon--mail {
-  width: 16px;
-  height: 12px;
+@media screen and (min-width: 768px) {
+  .contacts__list:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__list:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.contacts__icon--phone {
-  width: 10px;
-  height: 16px;
+@media screen and (min-width: 768px) {
+  .contacts__icon--mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon--mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__icon--phone {
+    width: 10px;
+    height: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon--phone {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .hero {
@@ -899,14 +987,42 @@ button {
   padding: 27px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
 .team-member {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--footer-text-color);
 }
+@media screen and (max-width: 767px) {
+  .team-member:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-member {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-member {
+    width: 270px;
+  }
+}
 
 .team__wrap {
-  padding: 30px 0;
+  padding: 30px 0 24px;
+}
+@media screen and (min-width: 768px) {
+  .team__wrap {
+    padding-bottom: 30px;
+  }
 }
 
 .team-title {
@@ -926,11 +1042,36 @@ button {
   margin-bottom: 16px;
 }
 
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clients-item {
+  width: 210px;
+  height: 92px;
+}
+
 .clients-link {
   color: var(--icons-color);
   border: 1px solid var(--icons-color);
+  padding: 16px 52px;
   display: flex;
   transition: color var(--transition), border-color var(--transition);
+}
+@media screen and (min-width: 768px) {
+  .clients-link {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-link {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 .clients-link:hover, .clients-link:focus {
   color: var(--accent-text-color);
@@ -939,12 +1080,33 @@ button {
 
 .client-icon {
   fill: currentColor;
+  width: 106px;
+  height: 60px;
 }
 
 .footer {
   background-color: #2f303a;
   box-sizing: content-box;
   padding: 60px 0;
+}
+@media screen and (max-width: 767px) {
+  .footer__contacts {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__contacts {
+    text-align: center;
+    margin-left: 76px;
+    margin-right: 165px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__contacts {
+    margin-right: 70px;
+  }
 }
 .footer__link {
   color: var(--footer-text-color);
@@ -966,7 +1128,22 @@ button {
 }
 
 .footer__socials {
-  margin-right: auto;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .footer__socials {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__socials {
+    align-self: start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__socials {
+    margin-right: auto;
+  }
 }
 .footer__socials .socials-collection__link {
   background-color: rgba(255, 255, 255, 0.1);
