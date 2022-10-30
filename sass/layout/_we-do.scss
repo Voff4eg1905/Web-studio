@@ -1,0 +1,32 @@
+.we-do-item {
+    position: relative;
+    text-align: center;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 24%;
+        background-color: rgba(47, 48, 58, 0.8);
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+  }
+  .we-do-images {
+    display: flex;
+    margin-top: 50px;
+    gap: 30px;
+  }
+  .we-do-text {
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--footer-text-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 27px 0;
+  }
