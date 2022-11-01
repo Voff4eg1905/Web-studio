@@ -73,3 +73,36 @@
     color: var(--accent-text-color);
   }
 }
+
+.button--dropdown-menu {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-left: auto;
+  padding: 11px;
+  box-sizing: border-box;
+  z-index: 2;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-text-color);
+  }
+}
+
+.icon-close {
+  display: none;
+
+  .mobile-dropdown.is-open ~ .button--dropdown-menu & {
+    display: block;
+  }
+}
+
+.icon-menu {
+  .mobile-dropdown.is-open ~ .button--dropdown-menu & {
+    display: none;
+  }
+}

@@ -1,9 +1,15 @@
 
 .thumb {
-    max-width: 370px;
     position: relative;
     overflow: hidden;
   
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 370px;
+    }
     &::before {
       content: '';
       width: 100%;
@@ -23,7 +29,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 63px 24px;
+    padding: 77px 24px;
     font-size: 18px;
     line-height: 1.55;
     letter-spacing: 0.03em;
@@ -31,6 +37,15 @@
     transform: translateY(100%);
     transition: transform var(--transition);
   
+    @media screen and (min-width:768px) {
+      padding-top: 49px;
+    }
+    @media screen and (min-width:768px) {
+      padding-top: 63px;
+      padding-bottom: 63px;
+    }
+
+
     .examples-list__link:hover &,
     .examples-list__link:focus & {
       transform: translateY(0);
@@ -38,9 +53,18 @@
     }
   }
   .thumb__wrap {
+      flex-grow: 1;
       padding: 20px 24px;
       border: 1px solid #eeeeee;
       border-top: 0;
+      
+      @media screen and (min-width: 768px) {
+        width: 354px;
+      }
+  
+      @media screen and (min-width: 1200px) {
+        width: 370px;
+      }
     }
   .thumb__title {
     font-weight: 700;
@@ -59,4 +83,5 @@
     letter-spacing: 0.03em;
     color: var(--main-text-color);
   }
+  
   

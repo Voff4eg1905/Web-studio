@@ -5,8 +5,13 @@
   gap: 30px;
 }
 .clients-item {
-  width: 210px;
+  width: 226px;
   height: 92px;
+
+  @media screen and (min-width:1200px) {
+    width: 170px;
+
+  }
 }
 .clients-link {
   color: var(--icons-color);
