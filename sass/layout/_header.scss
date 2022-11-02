@@ -11,7 +11,9 @@
     padding: 25px;
   }
 }
-
+.header__nav {
+  flex: 1 1 auto;
+}
 .pages {
   @media screen and (min-width: 768px) {
     display: flex;
