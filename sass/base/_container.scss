@@ -1,26 +1,28 @@
 .container {
     padding: 0 15px;
     margin: 0 auto;
-  
+    outline: 2px solid red;
+    @media screen and (max-width:1199px) {
+      justify-content: space-around;
+
+    }
+
+  @media screen and (min-width:480px) {
+    width: 480px;
+
+  }
+  @media screen and (min-width:768px) {
+    width: 768px;
+  }
+  @media screen and (min-width:1200px) {
+    width: 1200px;
+  }
     &--flex {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
 
 
-     @media screen and (max-width:1199px) {
-        justify-content: space-around;
-  
-      }
-    @media screen and (min-width:480px) {
-      width: 480px;
-
-    }
-    @media screen and (min-width:768px) {
-      width: 768px;
-    }
-    @media screen and (min-width:1200px) {
-      width: 1200px;
-    }
+    
   }
 }

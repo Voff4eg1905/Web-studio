@@ -328,31 +328,32 @@ button {
 .container {
   padding: 0 15px;
   margin: 0 auto;
+  outline: 2px solid red;
+}
+@media screen and (max-width: 1199px) {
+  .container {
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 .container--flex {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-}
-@media screen and (max-width: 1199px) {
-  .container--flex {
-    justify-content: space-around;
-  }
-}
-@media screen and (min-width: 480px) {
-  .container--flex {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container--flex {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container--flex {
-    width: 1200px;
-  }
 }
 
 .section {
