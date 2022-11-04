@@ -1,15 +1,9 @@
 .container {
     padding: 0 15px;
     margin: 0 auto;
-    outline: 2px solid red;
-    @media screen and (max-width:1199px) {
-      justify-content: space-around;
-
-    }
 
   @media screen and (min-width:480px) {
     width: 480px;
-
   }
   @media screen and (min-width:768px) {
     width: 768px;
@@ -21,7 +15,10 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: space-around;
 
+
+    
 
     
   }

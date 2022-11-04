@@ -328,12 +328,6 @@ button {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  outline: 2px solid red;
-}
-@media screen and (max-width: 1199px) {
-  .container {
-    justify-content: space-around;
-  }
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -354,6 +348,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
 }
 
 .section {
