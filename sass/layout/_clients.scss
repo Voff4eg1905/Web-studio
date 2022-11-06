@@ -5,8 +5,15 @@
   gap: 30px;
 }
 .clients-item {
-  width: 226px;
   height: 92px;
+
+  @media screen and (min-width:480px) {
+    width: 210px;
+  }
+  @media screen and (min-width:768px) {
+    width: 226px;
+  }
+ 
 
   @media screen and (min-width:1200px) {
     width: 170px;
@@ -17,6 +24,7 @@
   color: var(--icons-color);
   border: 1px solid var(--icons-color);
   padding: 16px 52px;
+  height: 100%;
   display: flex;
   transition: color var(--transition), border-color var(--transition);
 
